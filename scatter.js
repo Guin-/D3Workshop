@@ -76,6 +76,17 @@ scatter = function(data){
          })
          .attr('fill','red');
 
+    data.forEach(function(val, i){
+        if (i < data.length -1){
+            wrapper.append('line')
+                    .attr('x1', )
+                    .attr('x2', )
+                    .attr('y1', )
+                    .attr('y2', )
+                    .attr('stroke', 'red')
+        }
+    })
+
   // PAUSE: Your code should now be runnable!
   // load show.html and type in a state to see the plot (capitalize correctly)
 
@@ -99,6 +110,15 @@ scatter = function(data){
         .attr('fill', 'blue');
   // BONUS CHALLENGE: If you finish early, try adding appropriately colored lines to connect the points on the plot.
 
-
+    data.forEach(function(val, i){
+        if (i < data.length -1){
+            wrapper.append('line')
+                    .attr('x1', )
+                    .attr('x2', )
+                    .attr('y1', )
+                    .attr('y2', )
+                    .attr('stroke', 'blue')
+        }
+    })
   return canvas;
 }
