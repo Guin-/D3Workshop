@@ -79,10 +79,10 @@ scatter = function(data){
     data.forEach(function(val, i){
         if (i < data.length -1){
             wrapper.append('line')
-                    .attr('x1', )
-                    .attr('x2', )
-                    .attr('y1', )
-                    .attr('y2', )
+                    .attr('x1', xScale(new Date(years[i],1,1)))
+                    .attr('x2', xScale(new Date(years[i +1],1, 1)))
+                    .attr('y1', yScale(data[i]))
+                    .attr('y2', yScale(data[i+1]))
                     .attr('stroke', 'red')
         }
     })
@@ -113,12 +113,13 @@ scatter = function(data){
     data.forEach(function(val, i){
         if (i < data.length -1){
             wrapper.append('line')
-                    .attr('x1', )
-                    .attr('x2', )
-                    .attr('y1', )
-                    .attr('y2', )
+                    .attr('x1', xScale(new Date(years[i],1,1)))
+                    .attr('x2', xScale(new Date(years[i +1],1, 1)))
+                    .attr('y1', yScale(100-data[i]))
+                    .attr('y2', yScale(100-data[i+1]))
                     .attr('stroke', 'blue')
         }
     })
+
   return canvas;
 }
